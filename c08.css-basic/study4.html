@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자의 우선순위 점수</title>
+    <link rel="stylesheet" href="../css/study4.css">
+</head>
+<body>
+    <p>css는 선택자 부분에서 표현 특이점이 높을수록 우선수위점수가 높게 적용되며, 이 우선순위점수가 높은 스타일이 우선반영된다.</p>
+    <ul>
+        <li>태그명 사용 → 1점</li>
+        <li>클래스명 사용 → 10점</li>
+        <li>아이디명 사용 → 100점</li>
+        <li>인라인스타일 사용 → 1000점</li>
+        <li>!important → 무조건 적용(남용 금지)</li>
+    </ul>
+    <div class="box">
+         <h2 class="a b" id="a"
+         style="color: red;">제목</h2>
+    </div>
+   
+</body>
+</html>

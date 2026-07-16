@@ -1,0 +1,94 @@
+*{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{
+    font-size:inherit;
+    font-weight: inherit;
+}
+address{
+    font-style: inherit;
+}
+ol,ul{list-style: none;}
+a{
+    text-decoration: inherit;
+    color:inherit;
+}
+img{
+    max-width: 100%;
+}
+
+html{
+    font-family:'Aboreto','Pretendard', sans-serif;
+    font-size: 20px;
+}
+main {
+    background: url(./img/격자무늬\ 패턴.png) no-repeat 50% 740px;
+}
+
+.point-type{font-family: "Aboreto";}
+
+.hero-banner{
+    height: 599px;
+    border-radius: 0 0 150px 150px;
+    background: url(./img/상단배경.png) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+}
+.hero-banner h1{
+    font-size: 2.5rem;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+.conainer{
+    width: 1600px;
+    margin: 0 auto;
+}
+.con1{
+    padding-top: 10rem;
+    background: url(./img/데코.svg) no-repeat 50% 0;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.con1 h2{
+    font-size: 7.5rem;
+    line-height: 90%;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.con1 p{
+    line-height: 140%;
+    text-transform: uppercase;
+}
+
+.con1 p span{
+    color: #770000;
+}
+.con2{}
+
+.cafe-figure{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+.cafe-figure figure{
+    flex: 1;
+    line-height: 0;   
+}
+.cafe-figure figure img{
+    width: 100%;
+    aspect-ratio: 790/434;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.con2 h3{
+    font-size: 2rem;
+    line-height: 140%;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.con2 p{
+    line-height: 140%;
+}
+.con2 h3+p{
+    margin-bottom: .5rem;
+}

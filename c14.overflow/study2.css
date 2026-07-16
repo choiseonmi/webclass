@@ -1,0 +1,27 @@
+*{
+    margin: 0; padding: 0;
+}
+.a{
+    border: 10px solid #000;
+    width: 50%;
+    max-width: 400px;
+    min-width: 300px;
+    min-height: 500px;
+    max-height: 1000px;
+    overflow: auto;
+}
+/*vw에 대해 알아보자 v는 viewport w는 width */
+.b{
+    border: 10px solid red;
+    /* width: 10vw; */
+    width: 10vh;
+}
+/* %와 vw,vh의 차이를 알아보기 위함, %는 부모태그의 수치를 따름  하지만 vw로 하면 부모태그의 수치를 무시하고 viewport를 따름*/
+.parent{
+    width: 1000px;
+    border: 5px solid blue;
+}
+.children{
+    width:50vw;
+    border: 5px solid red;
+}

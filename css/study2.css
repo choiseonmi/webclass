@@ -1,0 +1,9 @@
+h2{
+    color: green;}
+li.a{
+    color: red;}
+li.a.b{
+    color: green;}
+h3#b{
+    color: blue;}
+li#b.c{color: aquamarine;}

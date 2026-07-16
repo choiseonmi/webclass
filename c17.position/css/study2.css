@@ -1,0 +1,34 @@
+/* main{overflow: hidden;} */
+/* 부모에게 overflow를 해놓으면 스티키가 안된다. */
+.box{
+    text-align: center;
+}
+.box p{padding: 200px 30%;}
+.box h2{
+    font-size: 10vw;
+    position: sticky;
+    /* 부모태그가 화면에 보이는 동안만 스티커처럼 보임 */
+    left: 0;
+    top:100px;
+    border: 1px solid red;
+}
+.imgbox{
+    background-color: ivory;
+    padding:160px 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+.imgbox p{
+    padding:200px 30px;
+}
+.sticky-img{
+    width:600px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    
+}
+.sticky-img img{
+    width:100px;
+}

@@ -1,0 +1,8 @@
+h1{background-color: aqua;
+width: 400px; height: 400px;
+display: inline-block;}
+strong{background-color: aquamarine;
+display: inline-block; 
+width: 400px; height: 400px;}
+button{display: inline-block; 
+    width: 200px; height: 200px;}

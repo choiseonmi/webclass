@@ -1,0 +1,43 @@
+*{margin: 0px;padding: 0px;}
+.a{
+    border: 1px solid #000;
+    height: 1500px;
+    background-color: aqua;
+    background-image: url("../c12.background/img/summer.jpg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 100px) 200px;
+    background-size: auto 50%;}
+.b{
+    border: 1px solid #000;
+    height: 1500px;
+    background: url(../c12.background/img/summer.jpg) no-repeat calc(100% - 100px) 200px / auto 50%;
+    }
+.c{
+    border: 1px solid red;
+    height: 1000px;
+    background: purple url(../c12.background/img/summer.jpg) no-repeat 50% 50% / contain;
+    background-blend-mode: multiply;
+}
+.d{
+    border: 1px solid red;
+    height: 1000px;
+    background: 
+    url(../c12.background/img/paul-green-5lRxNLHfZOY-unsplash.jpg) no-repeat 50% 50% / 400px auto,
+    url(../c12.background/img/roonz-nl-ATgfRqpFfFI-unsplash.jpg) no-repeat 50% 50% / 500px auto,
+    url(../c12.background/img/summer.jpg) no-repeat 50% 50% / 600px auto;
+}
+.e{
+   border: 1px solid red;
+   height: 1000px; 
+    background:
+    url(../c12.background/img/paul-green-5lRxNLHfZOY-unsplash.jpg) no-repeat 50% 50% / 800px auto,
+    linear-gradient(30deg, rgba(253, 0, 0, 0.623) 40%, blue 60%, pink 80%);
+}
+.e .box{
+    width: 400px;
+    height: 800px;
+    background-color: rgba(255,255,255,0.7);
+    margin-top: 100px;
+    margin: 0px auto;
+    backdrop-filter: blur(15px);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>양식 태그</title>
+</head>
+<body>
+    <form action="#">
+    <div>
+    <label for="user-id">아이디</label>
+    <input type="text" id="user-id" placeholder="아이디를 입력해주세요">
+    </div>
+    <div>
+        <label for="user-pw">비밀번호</label>
+        <input type="password" id="user-pw"  placeholder="비밀번호를 입력해주세요">
+    </div>
+    <input type="submit" value="로그인">
+    </form>
+
+    <hr>
+    <form action="#" enctype="multipart/form-data">
+        <fieldset>
+            <legend>계정 정보</legend>
+            <div>
+                <label for="userId">아이디</label>
+                <input type="text" id="userId" name="userId" value="choism0512" disabled>
+            </div>
+            <div>
+                <label for="userPw">비밀번호</label>
+                <input type="password" id="userPw">
+            </div>
+             <div>
+                <label for="userPw2">비밀번호 확인</label>
+                <input type="password" id="userPw2">
+            </div>
+            <p>비밀번호는 영대문자와 영소문자 그리고 특수문자를 포함시켜주세요</p>
+        </fieldset>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <div>
+                <label for="userName">이름</label>
+                <input type="text" id="userName" name="userName" value="최선미">
+            </div>
+            <div>
+                <label for="userGender">성별</label>
+                <input type="radio"id=man name="userGender" checked>
+                <label for="man">남자</label>
+                <input type="radio"id=woman name="userGender">
+                <label for="woman">여자</label>
+                <input type="radio"id=noPreference name="userGender">
+                <label for="noPreference">선택안함</label>
+            </div>
+            <div>
+                <label for="userBirth">생년월일</label>
+                <input type="date" id="userBirth" name="userBirth">
+            </div>
+            <div>
+                <label for="userService">전화번호</label>
+                <select name="" id="service" id="userService">
+                    <option value="skt">SKT</option>
+                    <option value="kt">KT</option>
+                    <option value="lgu" selected>LG U+</option>
+                    <option value="알뜰폰">알뜰폰</option>
+                    <option value="선택안함">선택안함</option>
+                </select>
+                <input type="number" name="phoneNumber" value="01012345678">
+                <a href="#">인증요청</a>
+            </div>
+            <div>
+                <label for="confirmNunber">인증 확인번호</label>
+                <input type="number" id="confirmNunber" name="confirmNunber">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>기타 정보</legend>
+            <div>
+                <label for="userPhoto">프로필 사진</label>
+                <input type="file" id="userPhoto" name="userPhoto">
+            </div>
+            <div>
+                <label for="">자기소개글</label>
+                <textarea name="userProfileText" id="userProfileText" placeholder="자기소개글을 입력해주세요"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <p>개인정보처리방침 전문</p>
+            <div>
+                <input type="checkbox" id="userAgreen" name="userAgreen">
+                <label for="userAgreen">개인정보처리방침에 동의합니다.</label>
+            </div>
+            <fieldset>
+                <legend>제출</legend>
+                <button type="submit">회원가입하기</button>
+                <button type="reset">취소하기</button>
+            </fieldset>
+        </fieldset>
+        
+    </form>
+</body>
+</html>

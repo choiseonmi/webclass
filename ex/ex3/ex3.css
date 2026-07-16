@@ -1,0 +1,112 @@
+*{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{
+    font-size:inherit;
+    font-weight: inherit;
+}
+address{
+    font-style: inherit;
+}
+ol,ul{list-style: none;}
+a{
+    text-decoration: inherit;
+    color:inherit;
+}
+img{
+    max-width: 100%;
+}
+
+.highlight{
+    color: red;
+}
+
+.banner{
+    background-image: url(./img/상단배경.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw; /* full viewport width */
+    height: 599px;
+    font-family: Aboreto;
+    font-size: 50px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+}
+
+.line{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line img{
+    display: block;
+}
+
+.inner-frame{
+    margin: 0 auto; /* center horizontally */
+    background-image: url(./img/격자무늬\ 패턴.png);
+    background-size: 100% 613px;
+    height: 613px;
+}
+.inner-title{
+    font-family: Aboreto;
+    font-size: 150px;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.con1{
+    font-family: 'pretendard';
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 100px;
+
+}
+.inner-img{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto; /* center horizontally */
+
+}
+.inner-img img{
+    width: 790px;
+    height:434px;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.content-text{
+    width: 1600px;
+    margin: 0 auto; /* center horizontally */
+    padding-top: 22%;
+}
+h3{
+    font-family: Aboreto;
+    font-size: 40px;
+    color: #000;
+    margin-bottom: 20px;
+}
+.con2{
+    font-family: pretendard;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+}
+.con3{
+     font-family: pretendard;
+    font-size: 20px;
+    color: #000;
+    
+}

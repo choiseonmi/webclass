@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <link rel="stylesheet" href="./study1.css">
+</head>
+<body>
+    <div class="a">
+        검은색 선 박스
+        가로는 200
+        세로는 200
+        삐져나오는 글씨처리는 세로스크롤
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dignissimos consequuntur  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis ullam distinctio aspernatur ipsa blanditiis, amet natus maiores dolor voluptatum repellat officia, inventore cum laborum numquam suscipit, tempore laudantium ducimus deleniti.
+    </div>
+    <div class="b">
+        빨간색 선 박스
+        가로는 200
+        가로를 감싸지 않고 글씨가 흘러넘치게
+        그래서 가로스크롤처리 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis ullam distinctio aspernatur ipsa blanditiis, amet natus maiores dolor voluptatum repellat officia, inventore cum laborum numquam suscipit, tempore laudantium ducimus deleniti.
+    </div>
+    <div class="c">
+        한줄 말줄임Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio enim veritatis illum nobis soluta sequi, praesentium molestias eveniet quod optio sit fuga perferendis expedita. Tempora velit quisquam quas nobis eos.
+    </div>
+    <div class="d">
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        위의 내용은 아직 비표준이라 외워야함 줄임줄을 바꾸고 싶다면 5을 바꾸면 됨
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi quos veritatis quod harum adipisci alias quia maiores iure recusandae perspiciatis, cumque nesciunt quibusdam nihil ipsum libero, labore molestias quam distinctio!
+    </div>
+</body>
+</html>

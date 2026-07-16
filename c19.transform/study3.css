@@ -1,0 +1,16 @@
+.box{
+    background-color: pink;
+    height: 800px;
+    position: relative;
+}
+.a{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    /* left: calc(50% - 100px);
+    top: calc(50% - 100px); */
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%)
+}

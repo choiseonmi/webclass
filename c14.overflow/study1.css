@@ -1,0 +1,47 @@
+*{
+    margin: 0; padding: 0;
+}
+.a{
+    border: 10px solid #000;
+    width: 200px;
+    height: 200px;
+    overflow-y: scroll;
+}
+.b{
+    border: 10px solid red;
+    width: 200px;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+.c{
+    border: 10px solid #000;
+    width: 200px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*위의 내용은 아직 비표준이라 외워야함 줄임줄을 바꾸고 싶다면 5을 바꾸면 됨*/
+.d{
+     border: 10px solid #000;
+    width: 200px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*스크롤바 스타일 변경-외우지 말고 복사해서 사용하기*/
+.b::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+.b::-webkit-scrollbar-thumb {
+    background: blue;
+    border-radius: 10px;
+}
+.b::-webkit-scrollbar-track{
+    background: green;
+}

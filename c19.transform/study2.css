@@ -1,0 +1,48 @@
+.wrap-3d{
+    perspective: 1000px;
+    height: 800px;
+    border: 1px solid red;
+}
+.wrap-3d:hover .card{
+    transform: rotateY(210deg);
+ }
+.card{
+    transform: rotateY(30deg);
+    width: 400px;
+    height: 600px;
+    position: relative;
+    margin: 100px auto;
+    transition: transform 1s ease 0s;
+    transform-style: preserve-3d;
+    font-size: 30px;
+
+}
+.card-front{
+    background-color: salmon;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card-back{
+    background-color: darkorange;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0px;
+    top: 0;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

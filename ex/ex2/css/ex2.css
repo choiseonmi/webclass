@@ -1,0 +1,79 @@
+*{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{
+    font-size:inherit;
+    font-weight: inherit;
+}
+address{
+    font-style: inherit;
+}
+ol,ul{list-style: none;}
+a{
+    text-decoration: inherit;
+    color:inherit;
+}
+img{
+    max-width: 100%;
+}
+
+html{
+    font-family:'Aboreto','Pretendard', sans-serif;
+    font-size: 20px;
+}
+
+.banner{
+    background-image: url(../img/상위배너.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw; /* full viewport width */
+    height: 599px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+
+.banner-title{
+    font-family: Aboreto, sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.inner-frame{
+    width: 1600px;
+    max-width: 100%;
+    margin: 0 auto; /* center horizontally */
+    box-sizing: border-box;
+    
+}
+
+.inner-title{
+    font-family: Aboreto;
+    font-size: 80px;
+    color: #000;
+    line-height: 90%;
+    padding-bottom: 60px;
+    border-bottom: 2px solid #000;
+}
+
+.inner-frame > p{
+    font-family: pretendard;
+    font-size: 1rem;
+    color:#000;
+    text-align: right;
+}
+
+.inner-frame > figure > img{
+    margin-top: 4rem;
+    width: 1000px;
+    height: 430px;
+    object-fit: cover;
+}
+
+.inner-frame > figure > figcaption{
+    font-family: pretendard;
+    font-size: 1rem;
+    color: #000;
+
+}

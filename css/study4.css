@@ -1,0 +1,11 @@
+div h2#a.a{color: green;}
+h2#a.a{color: red;}
+h2#a{color: blue;}
+#a{color: red;}
+h2.a{color: red;}
+h2.a.b{color: blue;}
+.a{color: orange;}
+.a{color: green;}
+h2{color: red;}
+h2{color: blue; background-color: aqua;}
+h2{color: blue !important;}
