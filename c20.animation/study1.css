@@ -1,0 +1,48 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.a{
+    width:100px;
+    height:100px;
+    background-color: red;
+    /* animation-name: myrotate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: normal; */
+    animation:myrotate 2s linear 0s 2 normal;
+
+}
+.b{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+.c{
+    position: absolute;
+    top: 60%;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+.rotate{
+    animation:myrotate 2s linear 0s 2 normal ;
+}
+.rotate:hover{
+    animation-play-state: paused;
+}
+
+@keyframes myrotate {
+    0%{transform: rotate(0deg);}
+    25%{background-color: orangered;}
+    50%{transform: rotate(180deg)scale(1.5);}
+    100%{transform: rotate(180deg);}
+}

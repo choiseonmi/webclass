@@ -1,0 +1,148 @@
+/* 기본 설정 */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    background-color: #02040f;
+}
+
+/* 화면 전체에 고정되는 밤하늘 */
+.night-sky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 25%, rgba(65, 86, 150, 0.3), transparent 30%),
+        radial-gradient(circle at 80% 75%, rgba(32, 79, 135, 0.25), transparent 35%),
+        linear-gradient(180deg, #02030b 0%, #07142c 65%, #0b2344 100%);
+}
+
+/* 배경의 작은 별 */
+.night-sky::before,
+.night-sky::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image:
+        radial-gradient(circle, #ffffff 0 1px, transparent 1.5px),
+        radial-gradient(circle, #b9dcff 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.75) 0 0.7px, transparent 1.2px);
+    background-position:
+        20px 30px,
+        80px 110px,
+        45px 70px;
+    background-size:
+        130px 150px,
+        190px 210px,
+        90px 110px;
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+.night-sky::after {
+    opacity: 0.5;
+    transform: scale(1.3);
+    animation-delay: -2s;
+}
+
+/* JavaScript에서 생성되는 별똥별 */
+.shooting-star {
+    position: absolute;
+    top: var(--start-y, -20vh);
+    left: var(--start-x, -20vw);
+    width: var(--length, 130px);
+    height: 2px;
+    border-radius: 999px;
+    opacity: 0;
+    transform: rotate(45deg);
+    transform-origin: right center;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(150, 210, 255, 0.25) 25%,
+        rgba(200, 235, 255, 0.85) 75%,
+        #ffffff 100%
+    );
+    filter: drop-shadow(0 0 6px #9dd8ff);
+    will-change: transform, opacity;
+    animation-name: shooting;
+    animation-duration: var(--duration, 2s);
+    animation-timing-function: linear;
+    animation-delay: var(--delay, 0s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+/* 별똥별의 밝은 머리 */
+.shooting-star::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow:
+        0 0 6px 2px #ffffff,
+        0 0 12px 4px #86cfff;
+    transform: translateY(-50%);
+}
+
+/* 왼쪽 위에서 오른쪽 아래로 45도 이동 */
+@keyframes shooting {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) rotate(45deg);
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate3d(var(--travel, 900px), var(--travel, 900px), 0)
+            rotate(45deg);
+    }
+}
+
+/* 배경 별 반짝임 */
+@keyframes twinkle {
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 0.95;
+    }
+}
+
+/* 모션 감소 설정을 사용하는 경우 */
+@media (prefers-reduced-motion: reduce) {
+    .night-sky::before,
+    .night-sky::after,
+    .shooting-star {
+        animation: none;
+    }
+}

@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: #111827;
+    color: #ffffff;
+}
+
+/* 화면 밖으로 나가는 내용을 숨기는 마키 영역 */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    padding: 28px 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    background-color: #2563eb;
+}
+
+/* 동일한 그룹 두 개를 그룹 하나의 너비만큼 이동 */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 18s linear infinite;
+    will-change: transform;
+}
+
+.marquee-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 48px;
+    padding-right: 48px;
+}
+
+.marquee-group span {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.marquee-group span::after {
+    content: "✦";
+    color: #facc15;
+    font-size: 0.55em;
+}
+
+/* 마우스를 올리면 내용을 읽을 수 있도록 잠시 정지 */
+.marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+        animation-play-state: paused;
+    }
+}
